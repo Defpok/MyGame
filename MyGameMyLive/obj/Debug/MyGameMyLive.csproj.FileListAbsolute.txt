@@ -1,0 +1,7 @@
+G:\new VS\MyGameMyLive\MyGameMyLive\bin\Debug\MyGameMyLive.exe.config
+G:\new VS\MyGameMyLive\MyGameMyLive\bin\Debug\MyGameMyLive.exe
+G:\new VS\MyGameMyLive\MyGameMyLive\bin\Debug\MyGameMyLive.pdb
+G:\new VS\MyGameMyLive\MyGameMyLive\obj\Debug\MyGameMyLive.csproj.AssemblyReference.cache
+G:\new VS\MyGameMyLive\MyGameMyLive\obj\Debug\MyGameMyLive.csproj.CoreCompileInputs.cache
+G:\new VS\MyGameMyLive\MyGameMyLive\obj\Debug\MyGameMyLive.exe
+G:\new VS\MyGameMyLive\MyGameMyLive\obj\Debug\MyGameMyLive.pdb
