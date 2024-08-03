@@ -5,3 +5,10 @@ G:\new VS\MyGameMyLive\MyGameMyLive\obj\Debug\MyGameMyLive.csproj.AssemblyRefere
 G:\new VS\MyGameMyLive\MyGameMyLive\obj\Debug\MyGameMyLive.csproj.CoreCompileInputs.cache
 G:\new VS\MyGameMyLive\MyGameMyLive\obj\Debug\MyGameMyLive.exe
 G:\new VS\MyGameMyLive\MyGameMyLive\obj\Debug\MyGameMyLive.pdb
+G:\Fork\MyGame\MyGameMyLive\bin\Debug\MyGameMyLive.exe.config
+G:\Fork\MyGame\MyGameMyLive\bin\Debug\MyGameMyLive.exe
+G:\Fork\MyGame\MyGameMyLive\bin\Debug\MyGameMyLive.pdb
+G:\Fork\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.csproj.AssemblyReference.cache
+G:\Fork\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.csproj.CoreCompileInputs.cache
+G:\Fork\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.exe
+G:\Fork\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.pdb

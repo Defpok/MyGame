@@ -11,81 +11,63 @@ namespace MyGameMyLive
     {
 
 
-
-        Random random = new Random();
-
-        public char[] MapsWorld = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', };
-
-        public void MapConclusion()
-        {
-            MapSpawnBiom();
-
-            foreach (char c in MapsWorld)
+        
+        public char[,] MapsWorld =
             {
+        { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '}
+            };
 
-                Console.Write(c);
-            }
+        public char[,] foresterSpruce = {
+        { ' ', ' ', '^', ' ', ' ' },
+        { ' ', '/', ' ', '\\', ' ' },
+        { '/', ' ', '|', ' ', '\\' }
+    };
 
-        }
-        void MapSpawnBiom()
+        public char[,] foresterOak = {
+        { '\\', ' ', '|', ' ', '/' },
+        { ' ', '\\', '|', '/', ' ' },
+        { ' ', ' ', '|', ' ', ' ' }
+    };
+        
+
+        public void MapSpawnObject(int startRow, int startCol, char[,] obj)
         {
+            
+            
+            int objRows = obj.GetLength(0);
+            int objCols = obj.GetLength(1);
 
-            int randSpawnBiom = random.Next(1, 4);
+            for (int i = 0; i < objRows; i++)
+            {
+                for (int j = 0; j < objCols; j++)
+                {
+                    // Проверяем, чтобы не выйти за границы массива MapsWorld
+                    if (startRow + i < MapsWorld.GetLength(0) && startCol + j < MapsWorld.GetLength(1))
+                    {
+                        MapsWorld[startRow + i, startCol + j] = obj[i, j];
+                    }
+                }
+            }
+        }
 
-
-            int[] biomMapsWorldOne = { 0, 11 }, biomMapsWorldTwo = { 11, 23 }, biomMapsWorldThree = {23, 35};
+        public void DisplayMap()
+        {
+            int rows = MapsWorld.GetLength(0);
+            int cols = MapsWorld.GetLength(1);
 
             
 
-            char forester = '^', road = '-', stone = '*';
-             
-            switch (randSpawnBiom)
+            for (int i = 0; i < rows; i++)
             {
-
-                case 1:
-                    MapForHelp(biomMapsWorldOne, forester);
-                    MapSpawnBiomTwoСhoice(biomMapsWorldTwo, biomMapsWorldThree, road, stone);
-
-                    break;
-                case 2:
-                    MapForHelp(biomMapsWorldTwo, forester);
-                    MapSpawnBiomTwoСhoice(biomMapsWorldOne, biomMapsWorldThree, road, stone);
-                    break;
-                case 3:
-                    MapForHelp(biomMapsWorldThree, forester);
-                    MapSpawnBiomTwoСhoice(biomMapsWorldOne, biomMapsWorldTwo, road, stone);
-                    break;
-            }
-
-        }
-
-        void MapSpawnBiomTwoСhoice(int[] numbersBiomOne, int[] numbersBiomTwo, char materialOne, char materialTwo)
-        {
-            
-            int randSpawnBiom = random.Next(1, 3);
-            switch (randSpawnBiom)
-            {
-                case 1:
-                    MapForHelp(numbersBiomOne, materialOne);
-                    MapForHelp(numbersBiomTwo, materialTwo);
-
-                    break;
-                case 2:
-                    MapForHelp(numbersBiomOne, materialTwo);
-                    MapForHelp(numbersBiomTwo, materialOne);
-                    break;
+                for (int j = 0; j < cols; j++)
+                {
+                    Console.Write(MapsWorld[i, j]);
+                }
+                Console.WriteLine();
             }
         }
 
-
-        void MapForHelp(int[] numbersBiom, char material)
-        {
-
-            for (int i = numbersBiom[0]; i < numbersBiom[1]; i++)
-            {
-                Console.SetCursorPosition(0, 15);
-                MapsWorld[i] = material;
-            }
-        }
     }
 }

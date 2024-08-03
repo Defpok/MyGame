@@ -14,8 +14,12 @@ namespace MyGameMyLive
         public int MaxArmor;
         public int CurrentArmor;
         public int Mana;
-        public char PlayerImage;
         public int PositionCursor;
+        public char[,] PlayerImage = {
+        {' ', 'о', ' '},
+        {'/', '|', '\\'},
+        {'/', ' ', '\\' }
+    };
 
         public Player()
         {
@@ -30,7 +34,6 @@ namespace MyGameMyLive
             MaxArmor = maxArmor;
             CurrentArmor = maxArmor;
             Mana = mana;
-            PlayerImage = '@';
             PositionCursor = positionCursor;
         }
 
