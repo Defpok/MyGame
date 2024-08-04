@@ -18,7 +18,7 @@ namespace MyGameMyLive
             ConclusionLoading conclusionLoading = new ConclusionLoading();
             string namePlayer = Console.ReadLine(); 
             Console.Clear();
-            Player player = new Player(namePlayer, 1000, 100, 100, 0);
+            Player player = new Player(namePlayer, 1005, 100, 100, 0);
             Unit unit = new Unit("ssda", 1000, 100, 100, 30);
             Map map = new Map();
             Write write = new Write();
