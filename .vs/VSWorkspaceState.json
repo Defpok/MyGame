@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MyGameMyLive"
+    "\\MyGameMyLive",
+    "\\MyGameMyLive\\Properties"
   ],
-  "PreviewInSolutionExplorer": false
+  "SelectedNode": "\\MyGameMyLive\\Program.cs",
+  "PreviewInSolutionExplorer": true
 }

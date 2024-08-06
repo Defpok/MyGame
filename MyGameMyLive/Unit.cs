@@ -16,6 +16,7 @@ namespace MyGameMyLive
         public int Mana;
         public int PositionCursor;
 
+
         public Unit(string name, int maxHealth, int maxArmor, int mana, int positionCursor) 
         {
             Name = name;
