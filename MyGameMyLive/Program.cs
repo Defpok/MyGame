@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 
 
@@ -13,63 +14,73 @@ namespace MyGameMyLive
     {
 
 
+
         static void Main(string[] args)
         {
             ConclusionLoading conclusionLoading = new ConclusionLoading();
-            string namePlayer = Console.ReadLine(); 
+            string namePlayer = Console.ReadLine();
             Console.Clear();
             Player player = new Player(namePlayer, 1005, 100, 100, 0);
             Unit unit = new Unit("ssda", 1000, 100, 100, 30);
+            int playerX = 0;
+            int playerY = 20;
             Map map = new Map();
             Write write = new Write();
+            Texturs texturs = new Texturs();
+            Console.CursorVisible = false;
 
-            int userXY = 0;
+
+
+
+
+
+
             while (player.CurrentHealth > 0)
             {
+
+
+
                 /*conclusionLoading.Loading();*/
                 write.ShowInfoPlayer(player);
                 write.ShowInfoUnit(unit);
 
 
-                map.MapSpawnObject(0, 0, map.foresterSpruce);
-                map.MapSpawnObject(0, 5, map.foresterOak);
 
-                map.MapSpawnObject(0, 10, map.foresterOak);
-                map.MapSpawnObject(0, 15, map.foresterOak);
-
-                map.MapSpawnObject(0, userXY, player.PlayerImage);
 
                 Console.SetCursorPosition(0, 20);
+                map.DisplayMap(playerX);
 
-                map.DisplayMap();
 
-                Console.SetCursorPosition(0, 15);
+                Console.SetCursorPosition(playerX, playerY);
+                for (int i = 0; i < player.PlayerImage.GetLength(0); i++)
+                {
+                    Console.SetCursorPosition(playerX, playerY + i);
+                    for (int j = 0; j < player.PlayerImage.GetLength(1); j++)
+                    {
+                        Console.Write(player.PlayerImage[i, j]);
+                    }
+                }
+
 
                 ConsoleKeyInfo cahrKey = Console.ReadKey();
-                switch(cahrKey.Key)
+                switch (cahrKey.Key)
                 {
-                    case ConsoleKey.A:
-                        userXY--;
+                    case ConsoleKey.LeftArrow:
+                        playerX--;
 
                         break;
-                    case ConsoleKey.D:
-                        userXY++;
+                    case ConsoleKey.RightArrow:
+                        playerX++;
                         break;
                 }
 
 
-
-
-
-                // Отображаем карту
-
-
-
-                
-                Console.Clear();
-
+                if(playerX == map.MapsWorld.GetLength(1) - 2)
+                    playerX = 0;
 
             }
+
+
         }
     }
 }
