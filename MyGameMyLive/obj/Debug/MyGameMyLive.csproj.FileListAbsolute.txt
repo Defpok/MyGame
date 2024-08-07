@@ -12,3 +12,10 @@ G:\Fork\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.csproj.AssemblyReference.cach
 G:\Fork\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.csproj.CoreCompileInputs.cache
 G:\Fork\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.exe
 G:\Fork\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.pdb
+C:\MyGame\MyGameMyLive\bin\Debug\MyGameMyLive.exe.config
+C:\MyGame\MyGameMyLive\bin\Debug\MyGameMyLive.exe
+C:\MyGame\MyGameMyLive\bin\Debug\MyGameMyLive.pdb
+C:\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.csproj.AssemblyReference.cache
+C:\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.csproj.CoreCompileInputs.cache
+C:\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.exe
+C:\MyGame\MyGameMyLive\obj\Debug\MyGameMyLive.pdb

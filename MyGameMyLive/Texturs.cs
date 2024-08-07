@@ -133,15 +133,20 @@ namespace MyGameMyLive
         { ' ', ',', '_', 'о', ' '},
         { ' ', '`', ' ', '`', ' '},
     };
-        public char[,] PlayerImage1 = {
+        public char[,] UnitImageUpyry = {
         {' ', 'о', ' '},
         {'/', '|', '\\'},
         {'/', ' ', '\\'}
     };
-        public char[,] PlayerImage2 = {
+        public char[,] UnitImageChort = {
         {' ', 'О',' ', ' '},
         {'/', '(', ')', '\\'},
         {'/', ' ', ' ', '\\'}
+    };
+        public char[,] UnitImageBes = {
+        {' ', ' ', '_','О', '_', ' ', ' '},
+        {'/', '(', '_','_','_',')', '\\'},
+        {' ', '/', ' ', ' ',' ', '\\',' ',}
     };
 
 
@@ -165,7 +170,7 @@ namespace MyGameMyLive
     { '{', ConsoleColor.Green },
     { '}', ConsoleColor.Green },
     { '\\', ConsoleColor.Green },
-    { '|', ConsoleColor.DarkYellow } // Коричневый цвет для ствола
+    { '|', ConsoleColor.Green } // Коричневый цвет для ствола
 };
 
         public Dictionary<char, ConsoleColor> PlayerColors = new Dictionary<char, ConsoleColor>
@@ -195,8 +200,8 @@ namespace MyGameMyLive
     { ')', ConsoleColor.DarkYellow },
     { '/', ConsoleColor.DarkYellow },
     { '\\', ConsoleColor.DarkYellow },
-    { '[', ConsoleColor.DarkYellow },
-    { ']', ConsoleColor.DarkYellow }
+    { '[', ConsoleColor.Blue },
+    { ']', ConsoleColor.Blue }
 };
 
 

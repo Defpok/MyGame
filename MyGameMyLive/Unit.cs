@@ -13,11 +13,14 @@ namespace MyGameMyLive
         public int CurrentHealth;
         public int MaxArmor;
         public int CurrentArmor;
+        public int Damage;
         public int Mana;
         public int PositionCursor;
-
-
-        public Unit(string name, int maxHealth, int maxArmor, int mana, int positionCursor) 
+        public char[,] UnitImage;
+        public int UnitX = 35;
+        public int UnitY = 20;
+        public bool FihtigToPlayer = false;
+        public Unit(string name, int maxHealth, int maxArmor, int mana, int damage, int positionCursor, char[,] unitImage) 
         {
             Name = name;
             MaxHealth = maxHealth;
@@ -25,7 +28,36 @@ namespace MyGameMyLive
             MaxArmor = maxArmor;
             CurrentArmor = maxArmor;
             Mana = mana;
+            Damage = damage;
             PositionCursor = positionCursor;
+            UnitImage = unitImage;
+
+        }
+        public void SpawnUnit(char[,] skinUnit, int playerMove)
+        {
+            Console.SetCursorPosition(UnitX, UnitY);
+            for (int i = 0; i < skinUnit.GetLength(0); i++)
+            {
+                Console.SetCursorPosition(UnitX, UnitY + i);
+                for (int j = 0; j < skinUnit.GetLength(1); j++)
+                {
+                    Console.Write(skinUnit[i, j]);
+                }
+            }
+            MoveUnit(playerMove);
+
+        }
+
+        public void MoveUnit(int playerMoveDuble) 
+        { 
+            if (UnitX != playerMoveDuble + 5 && UnitX != playerMoveDuble + 4 && UnitX != playerMoveDuble + 3)
+            {
+                UnitX--;
+            }
+            else
+            {
+                FihtigToPlayer = true;
+            }
         }
     }
 }

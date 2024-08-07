@@ -109,7 +109,7 @@ namespace MyGameMyLive
             if(TestSpawn == true || NumbersVovePlayer == MapsWorld.GetLength(1) - 3)
                 SpawnRandom();
 
-
+            Console.SetCursorPosition(0, 20);
             int rows = MapsWorld.GetLength(0);
             int cols = MapsWorld.GetLength(1);
 
@@ -159,10 +159,6 @@ namespace MyGameMyLive
                 else if (texture == texturs.Road)
                 {
                     colorMapping = texturs.RoadColors;
-                }
-                else if (texture == texturs.PlayerImage1 || texture == texturs.PlayerImage2)
-                {
-                    colorMapping = texturs.PlayerColors;
                 }
                 else if (texture == texturs.HomeOne || texture == texturs.HomeTwo || texture == texturs.HomeThree)
                 {
