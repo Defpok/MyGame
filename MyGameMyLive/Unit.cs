@@ -17,10 +17,10 @@ namespace MyGameMyLive
         public int Mana;
         public int PositionCursor;
         public char[,] UnitImage;
-        public int UnitX = 35;
+        public int UnitX = 90;
         public int UnitY = 20;
-        public bool FihtigToPlayer = false;
-        public Unit(string name, int maxHealth, int maxArmor, int mana, int damage, int positionCursor, char[,] unitImage) 
+        public bool FihtigToPlayer1 = false;
+        public Unit(string name, int maxHealth, int maxArmor, int mana, int damage, int positionCursor, char[,] unitImage)
         {
             Name = name;
             MaxHealth = maxHealth;
@@ -35,29 +35,36 @@ namespace MyGameMyLive
         }
         public void SpawnUnit(char[,] skinUnit, int playerMove)
         {
-            Console.SetCursorPosition(UnitX, UnitY);
-            for (int i = 0; i < skinUnit.GetLength(0); i++)
+            if (UnitX != 0)
             {
-                Console.SetCursorPosition(UnitX, UnitY + i);
-                for (int j = 0; j < skinUnit.GetLength(1); j++)
+                Console.SetCursorPosition(UnitX, UnitY);
+                for (int i = 0; i < skinUnit.GetLength(0); i++)
                 {
-                    Console.Write(skinUnit[i, j]);
+                    Console.SetCursorPosition(UnitX, UnitY + i);
+                    for (int j = 0; j < skinUnit.GetLength(1); j++)
+                    {
+                        Console.Write(skinUnit[i, j]);
+                    }
                 }
-            }
-            MoveUnit(playerMove);
+                MoveUnit(playerMove);
 
+            }
         }
 
-        public void MoveUnit(int playerMoveDuble) 
-        { 
+        public void MoveUnit(int playerMoveDuble)
+        {
+            
+
             if (UnitX != playerMoveDuble + 5 && UnitX != playerMoveDuble + 4 && UnitX != playerMoveDuble + 3)
-            {
+
                 UnitX--;
-            }
             else
-            {
-                FihtigToPlayer = true;
-            }
+                FihtigToPlayer1 = true;
+            
+
         }
+
+
+
     }
 }

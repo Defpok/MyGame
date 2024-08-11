@@ -55,17 +55,21 @@ namespace MyGameMyLive
             }
 
 
+
+
             ConsoleKeyInfo cahrKey = Console.ReadKey();
             switch (cahrKey.Key)
             {
                 case ConsoleKey.LeftArrow:
-                    playerX--;
+                    if (playerX != -0)
+                        playerX--;
 
                     break;
                 case ConsoleKey.RightArrow:
                     playerX++;
                     break;
             }
+
         }
         public int XPlayer()
         {

@@ -35,6 +35,7 @@ namespace MyGameMyLive
             Console.WriteLine($"Его защита: {unit.CurrentArmor}");
             Console.SetCursorPosition(unit.PositionCursor, 3);
             Console.WriteLine($"Его мана: {unit.Mana}");
+            
         }
     }
 }
