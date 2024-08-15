@@ -71,6 +71,7 @@ namespace MyGameMyLive
             }
 
         }
+        //бой, при вызове которого также отображаються способности в бою, у юнита также. 
         public int XPlayer()
         {
             return playerX;

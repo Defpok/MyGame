@@ -48,19 +48,20 @@ namespace MyGameMyLive
                 }
                 MoveUnit(playerMove);
 
+
             }
         }
 
         public void MoveUnit(int playerMoveDuble)
         {
-            
+
 
             if (UnitX != playerMoveDuble + 5 && UnitX != playerMoveDuble + 4 && UnitX != playerMoveDuble + 3)
 
                 UnitX--;
             else
                 FihtigToPlayer1 = true;
-            
+
 
         }
 
