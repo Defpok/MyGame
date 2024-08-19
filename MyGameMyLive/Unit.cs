@@ -49,7 +49,8 @@ namespace MyGameMyLive
                         Console.Write(skinUnit[i, j]);
                     }
                 }
-                MoveUnit(playerMove);
+                
+                    MoveUnit(playerMove);
 
 
             }

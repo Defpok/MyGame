@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 
@@ -128,7 +129,7 @@ namespace MyGameMyLive
         }
 
 
-
+        public int[] vorot;
 
         public void SpawnRandom()
         {
@@ -141,7 +142,7 @@ namespace MyGameMyLive
 
             for (int i = 0; i < randObject.Length; i++)
                 randObject[i] = random.Next(0, texturs.ListTexturs.Count);
-
+            vorot = randObject;
             for (int i = 0; i < randObject.Length; i++)
             {
                 char[,] texture = texturs.ListTexturs[randObject[i]];
@@ -173,5 +174,6 @@ namespace MyGameMyLive
                 longObjTextur += texture.GetLength(1);
             }
         }
+
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using static MyGameMyLive.Map;
 using static System.Net.Mime.MediaTypeNames;
 
 
@@ -38,7 +39,7 @@ namespace MyGameMyLive
             string namePlayer = Console.ReadLine();
             Console.Clear();
 
-            Player player = new Player(namePlayer, 1005, 100, 100, 50, 0);
+            Player player = new Player(namePlayer, 999, 100, 100, 50, 0);
             Map map = new Map();
 
             Console.CursorVisible = false;
@@ -46,12 +47,19 @@ namespace MyGameMyLive
             while (player.CurrentHealth > 0)
             {
                 // Обновление состояния игры
+
+               
+
+
+
                 playerMoveCheck++;
                 LevelUp(playerMoveCheck);
-                write.ShowInfoPlayer(player);
                 map.DisplayMap(playerXYMove);
+                
+                write.ShowInfoPlayer(player);
                 SpawnUnitRand();
                 
+                player.MovePlayer();
 
                 // Проверка на столкновение с каждым юнитом
                 foreach (var unit in units)
@@ -63,13 +71,26 @@ namespace MyGameMyLive
                     }
                 }
 
-                player.MovePlayer();
                 if (playerXYMove == map.MapsWorld.GetLength(1) - 3)
                     player.MovePlayerNewSpawn();
 
                 playerXYMove = player.XPlayer();
+
+                Texturs texturs = new Texturs();
+
+                for (int i = 0; i < texturs.ListTexturs.Count; i++)
+                {
+                    if (map.vorot[i] == i && 2 == texturs.ListTexturs[1].GetLength(1))
+                    {
+                        Console.SetCursorPosition(0, 25);
+                        Console.WriteLine(2222);
+                    }
+                }
+
+
             }
         }
+
 
         static void Fihgting(Player player, Unit unit)
         {
@@ -85,21 +106,28 @@ namespace MyGameMyLive
                 units.Remove(unit);
             }
         }
-
+        static bool block = false;
         static bool Battle(Player player, Unit unit)
         {
             // Здесь ваша логика боя
             while (player.CurrentHealth > 0 && unit.CurrentHealth > 0)
             {
                 // Игрок атакует НПС
-                player.PlayerBattling(player, unit);
-                if (unit.CurrentHealth <= 0) return true; // Игрок выиграл
+                Console.SetCursorPosition(0, 1);
+                Console.WriteLine("                                                                                                                       ");
+                
+                PlayerBattling(player, unit);
 
+                UnitBattling(player, unit);
+                /*if (unit.CurrentHealth <= 0) return true; // Игрок выиграл*/
+                block = false;
 /*                // НПС атакует игрока
                 player.CurrentHealth -= unit.Damage;
                 if (player.CurrentHealth <= 0) return false; // Игрок проиграл*/
             }
-            return false;
+            Console.Clear();
+            return true;
+
         }
 
         static void ClearUnitFromMap(Unit unit)
@@ -123,7 +151,6 @@ namespace MyGameMyLive
                 if (unit.CurrentHealth > 0)
                 {
                     unit.SpawnUnit(unit.UnitImage, playerXYMove);
-                    write.ShowInfoUnit(unit);
                 }
             }
         }
@@ -132,5 +159,85 @@ namespace MyGameMyLive
         {
             level = move / 100 + 1;
         }
+
+
+        static void PlayerBattling(Player player, Unit unit)
+        {
+            Write write = new Write();
+            write.ShowInfoUnit(unit);
+            write.ShowInfoPlayer(player);
+            write.ShowInfoPlayerBattle(player);
+            ConsoleKeyInfo valuebo = Console.ReadKey();
+            
+            switch (valuebo.Key)
+            {
+                case ConsoleKey.D1:
+                    unit.CurrentHealth -= player.Damage;
+                    Console.SetCursorPosition(0, 10);
+                    Console.WriteLine($"Вы нанесли {unit.Name} урон в размере {player.Damage}                                  ");
+                    
+                    break;
+                case ConsoleKey.D2:
+                    Console.SetCursorPosition(0, 10);
+                    Console.WriteLine($"Вы поставили блок, следующая атака врага не нанесет урона.                              ");
+                    block = true;
+
+                    break;
+                case ConsoleKey.D3:
+
+                    /*                    unit.CurrentHealth -= player.Damage;
+                                        Console.SetCursorPosition(0, 11);
+                                        Console.WriteLine($"Вы нанесли {unit.Name} урон в размере {player.Damage}");*/
+
+                    break;
+                default:
+                    break;
+            }
+            
+        }
+        static void UnitBattling(Player player, Unit unit)
+        {
+            Random randoms = new Random();   
+
+            int valuerand = randoms.Next(0, 4);
+
+            switch (valuerand)
+            {
+                case 1:
+                    if (!block)
+                    {
+                    player.CurrentHealth -= unit.Damage;
+                    Console.SetCursorPosition(0, 11);
+                    Console.WriteLine($"По Вам нанес {unit.Name} урон в размере {unit.Damage}                                                            ");
+                    }
+                    else
+                    {
+                        player.CurrentHealth -= 10;
+                        Console.SetCursorPosition(0, 11);
+                        Console.WriteLine($"Из-за блока, по Вам нанесли 10 урона                                                                  ");
+                    }
+                    
+                    break;
+                case 2:
+                    unit.CurrentHealth += 20;
+                    Console.SetCursorPosition(0, 11);
+                    Console.WriteLine($"Враг востановил здоровье на 20 единиц                                                                ");
+                    
+
+                    break;
+                case 3:
+
+                    player.CurrentHealth -= unit.Damage;
+                    Console.SetCursorPosition(0, 11);
+                    Console.WriteLine($"Вы нанесли {unit.Name} урон в ра2222змере {player.Damage}                                             ");
+
+                    break;
+                default:
+                    break;
+            }
+            
+        }
+
+
     }
 }

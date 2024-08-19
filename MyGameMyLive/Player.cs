@@ -83,46 +83,6 @@ namespace MyGameMyLive
         {
             playerX = 0;
         }
-        public bool PlayerBattling(Player player, Unit unit)
-        {
-            Write write = new Write();
-            write.ShowInfoPlayerBattle(player);
-            string valuebo = Console.ReadLine();
-            bool valueBlock = false;
-            ClearInfoBatlig();
-            switch (valuebo)
-            {
-                case "1":
-                    unit.CurrentHealth -= player.Damage;
-                    Console.SetCursorPosition(0, 11);
-                    Console.WriteLine($"Вы нанесли {unit.Name} урон в размере {player.Damage}");
-                    player.CurrentHealth -= 40;
-                    break;
-                case "2":
-                    Console.SetCursorPosition(0, 11);
-                    Console.WriteLine($"Вы поставили блок, следующая атака врага не нанесет урона.");
-                    valueBlock = true;
-
-                    break;
-                case "3":
-
-/*                    unit.CurrentHealth -= player.Damage;
-                    Console.SetCursorPosition(0, 11);
-                    Console.WriteLine($"Вы нанесли {unit.Name} урон в размере {player.Damage}");*/
-                
-                    break;
-                default:
-                    break;
-            }
-            return valueBlock;
-        }
-        public void ClearInfoBatlig()
-        {
-            Console.ReadKey();
-            Console.SetCursorPosition(0, 11);
-            Console.WriteLine("                                      ");
-            Console.SetCursorPosition(0, 10);
-            Console.WriteLine("                                      ");
-        }
+        
     }
 }
