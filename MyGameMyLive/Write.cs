@@ -37,5 +37,17 @@ namespace MyGameMyLive
             Console.WriteLine($"Его мана: {unit.Mana}");
             
         }
+        public void ShowInfoPlayerBattle(Player player)
+        {
+            Console.SetCursorPosition(0, 6);
+            Console.Write($"Ваши способности: ");
+            Console.SetCursorPosition(0, 7);
+            Console.WriteLine($"1 - удар {player.WeaponName}");
+            Console.SetCursorPosition(0, 8);
+            Console.WriteLine($"2 - поставить блок");
+            Console.SetCursorPosition(0, 9);
+            Console.WriteLine($"3 - использовать магию");
+        }
+
     }
 }

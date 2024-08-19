@@ -17,6 +17,8 @@ namespace MyGameMyLive
         public int Mana;
         public int PositionCursor;
         public char[,] UnitImage;
+        public char[,] WeaponScins;
+        public int Weapon;
         public int UnitX = 90;
         public int UnitY = 20;
         public bool FihtigToPlayer1 = false;
@@ -31,6 +33,7 @@ namespace MyGameMyLive
             Damage = damage;
             PositionCursor = positionCursor;
             UnitImage = unitImage;
+            
 
         }
         public void SpawnUnit(char[,] skinUnit, int playerMove)

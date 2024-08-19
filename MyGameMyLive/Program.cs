@@ -51,6 +51,7 @@ namespace MyGameMyLive
                 write.ShowInfoPlayer(player);
                 map.DisplayMap(playerXYMove);
                 SpawnUnitRand();
+                
 
                 // Проверка на столкновение с каждым юнитом
                 foreach (var unit in units)
@@ -91,12 +92,12 @@ namespace MyGameMyLive
             while (player.CurrentHealth > 0 && unit.CurrentHealth > 0)
             {
                 // Игрок атакует НПС
-                unit.CurrentHealth -= player.Damage;
+                player.PlayerBattling(player, unit);
                 if (unit.CurrentHealth <= 0) return true; // Игрок выиграл
 
-                // НПС атакует игрока
+/*                // НПС атакует игрока
                 player.CurrentHealth -= unit.Damage;
-                if (player.CurrentHealth <= 0) return false; // Игрок проиграл
+                if (player.CurrentHealth <= 0) return false; // Игрок проиграл*/
             }
             return false;
         }
