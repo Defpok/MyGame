@@ -32,14 +32,14 @@ namespace MyGameMyLive
         static int playerMoveCheck = 0;
         static Write write = new Write();
         static int playerXYMove = 0;
+        static int playerDamge = 50;
+        static int playerArmor = 100;
 
         static void Main(string[] args)
         {
-            ConclusionLoading conclusionLoading = new ConclusionLoading();
             string namePlayer = Console.ReadLine();
             Console.Clear();
-
-            Player player = new Player(namePlayer, 999, 100, 100, 50, 0);
+            Player player = new Player(namePlayer, 999, 100, 100, playerDamge, 0);
             Map map = new Map();
 
             Console.CursorVisible = false;
@@ -77,21 +77,177 @@ namespace MyGameMyLive
                 playerXYMove = player.XPlayer();
 
                 Texturs texturs = new Texturs();
+                
 
-                for (int i = 0; i < texturs.ListTexturs.Count; i++)
+                    // Проверка, если координаты ГГ равны координатам '*'
+                if (map.MapsWorld[2, player.playerX + 1] == '*')
                 {
-                    if (map.vorot[i] == i && 2 == texturs.ListTexturs[1].GetLength(1))
-                    {
-                        Console.SetCursorPosition(0, 25);
-                        Console.WriteLine(2222);
-                    }
+                    InputToPlayerBarell(player);
                 }
+                else
+                {
+                    Console.SetCursorPosition(0, 24);
+                    Console.WriteLine("                                                                                    ");
+                    Console.SetCursorPosition(0, 25);
+                    Console.WriteLine("                                                           ");
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("                                                           ");
+                }
+            }
+        }
+        
+        static void InputToPlayerBarell(Player player)
+        {
+            ConclusionLoading conclusionLoading = new ConclusionLoading();
+            Console.SetCursorPosition(0, 24);
+            Console.WriteLine("Нажмите F чтобы обыскать");
 
+            ConsoleKeyInfo valueb = Console.ReadKey();
+            switch (valueb.Key)
+            {
+                case ConsoleKey.F:
+                    Console.SetCursorPosition(0, 25);
+                    conclusionLoading.Loading();
+                    RandomPred(player);
+                    break;
+                default:
 
+                    break;
             }
         }
 
+        static void RandomPred(Player player)
+        {
+            Random random = new Random();
+            int value = random.Next(1, 21);
 
+            switch (value)
+            {
+                case 1:
+                    player.PotionHealing++;
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы нашли зелье здоровья");
+                    break;
+                case 2:
+                    player.PotionMana++;
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы нашли зелье маны");
+                    break;
+                case 3:
+                    player.ScinsInPlayer(true);
+                    playerDamge += 30;
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы нашли меч!(+30 к урону)");
+                    break;
+                case 4:
+                    playerArmor += 30;
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы нашли шлем!(+30 к броне)");
+                    break;
+                case 5:
+                    if(player.FireBall == 0)
+                    {
+                        player.FireBall++;
+                        Console.SetCursorPosition(0, 26);
+                        Console.WriteLine("Вы нашли огненный шар!(100 урона)");
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(0, 26);
+                        Console.WriteLine("Вы уже нашли огненный шар.");
+                    }
+                    break;
+                case 6:
+                    if (player.ElectroBall == 0)
+                    {
+                        player.ElectroBall++;
+                        Console.SetCursorPosition(0, 26);
+                        Console.WriteLine("Вы нашли элекро шар!(150 урона)");
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(0, 26);
+                        Console.WriteLine("Вы уже нашли элекро шар.");
+                    }
+                    break;
+                case 7:
+                    if (player.VoxduBall == 0)
+                    {
+                        player.VoxduBall++;
+                        Console.SetCursorPosition(0, 26);
+                        Console.WriteLine("Вы нашли воздушный шар!(оталкивает противника)");
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(0, 26);
+                        Console.WriteLine("Вы уже нашли воздушный шар.");
+                    }
+                    break;
+                case 8:
+                    player.PotionHealing++;
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы нашли зелье здоровья");
+                    break;
+                case 9:
+                    player.PotionHealing++;
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы нашли зелье здоровья");
+                    break;
+                case 10:
+                    player.PotionMana++;
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы нашли зелье маны");
+                    break;
+                case 11:
+                    player.PotionMana++;
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы нашли зелье маны");
+                    break;
+                case 12:
+                    player.PotionMana++;
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы нашли зелье маны");
+                    break;
+                case 13:
+                    player.PotionHealing++;
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы нашли зелье здоровья");
+                    break;
+                case 14:
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы ничего не нашли");
+                    break;
+                case 15:
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы ничего не нашли");
+                    break;
+                case 16:
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы ничего не нашли");
+                    break;
+                case 17:
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы ничего не нашли");
+                    break;
+                case 18:
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы ничего не нашли");
+                    break;
+                case 19:
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы ничего не нашли");
+                    break;
+                case 20:
+                    Console.SetCursorPosition(0, 26);
+                    Console.WriteLine("Вы ничего не нашли");
+                    break;
+                default:
+                    break;
+            }
+
+
+
+        }
         static void Fihgting(Player player, Unit unit)
         {
             // Реализация боя

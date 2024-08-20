@@ -20,6 +20,13 @@ namespace MyGameMyLive
             Console.WriteLine($"Твоя защита: {player.CurrentArmor}");
             Console.SetCursorPosition(player.PositionCursor, 3);
             Console.WriteLine($"Твоя мана: {player.Mana}");
+            
+            
+            Console.SetCursorPosition(60, 2);
+            Console.WriteLine($"Зелье здоровья(вверх): {player.PotionHealing}");
+            Console.SetCursorPosition(60, 3);
+            Console.WriteLine($"Зелье маны(вниз): {player.PotionMana}");
+
 
 
 

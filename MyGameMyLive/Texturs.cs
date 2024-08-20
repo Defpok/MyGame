@@ -53,12 +53,30 @@ namespace MyGameMyLive
             ListTexturs.Add(FlowersFo);
             ListTexturs.Add(Barrel);
             ListTexturs.Add(Barrel);
+            ListTexturs.Add(BarrelNone);
+            ListTexturs.Add(BarrelNone);
             ListTexturs.Add(HomeOne);
             ListTexturs.Add(HomeOne);
             ListTexturs.Add(HomeTwo);
             ListTexturs.Add(HomeTwo);
+            ListTexturs.Add(HomeThreeNone);
+            ListTexturs.Add(HomeThreeNone);
+            ListTexturs.Add(HomeThreeNone);
+            ListTexturs.Add(HomeThreeNone);
+            ListTexturs.Add(HomeThreeNone);
+            ListTexturs.Add(HomeThreeNone);
+            ListTexturs.Add(HomeThreeNone);
+            ListTexturs.Add(HomeThreeNone);
+            ListTexturs.Add(HomeThreeNone);
+            ListTexturs.Add(HomeThreeNone);
             ListTexturs.Add(HomeThree);
             ListTexturs.Add(HomeThree);
+            ListTexturs.Add(HomeThree1);
+            ListTexturs.Add(HomeThree1);
+            ListTexturs.Add(HomeThree2);
+            ListTexturs.Add(HomeThree2);
+            ListTexturs.Add(HomeThree3);
+            ListTexturs.Add(HomeThree3);
             ListTexturs.Add(Cat);
 
         } 
@@ -109,9 +127,14 @@ namespace MyGameMyLive
         { ' ', '|', ' '},
     }; 
         public char[,] Barrel = {
-        { ' ',' '},
-        { ' ',' '},
-        { '[',']'},
+        { ' ',' ',' '},
+        { ' ','_',' '},
+        { '[','*',']'},
+    }; 
+        public char[,] BarrelNone = {
+        { ' ',' ',' '},
+        { ' ','_',' '},
+        { '[',' ',']'},
     };
         public char[,] HomeOne = {
         {' ', ' ', '|','^','^','^','^','^','^','^','^','|', ' ', ' '},
@@ -123,10 +146,30 @@ namespace MyGameMyLive
         {' ', ' ', '|','[',']',' ',' ','[',']','|', ' ', ' '},
         {'_', '_', '|','_','_','_','_','_','_','|', '_', '_'}
     };
+        public char[,] HomeThreeNone = {
+        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
+        {' ', ' ', '|','(',' ',')','(',' ',')',' ',' ',' ',' ','|','_','_','_','_','|', ' ', ' '},
+        {'_', '_', '|','(',' ',')','(',' ',')','_','_','_','_','|','(',')','(',')','|', '_', '_'}
+    };
         public char[,] HomeThree = {
-        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
-        {' ', ' ', '|','(',')','(',')',' ',' ',' ',' ','|','_','_','_','_','|', ' ', ' '},
-        {'_', '_', '|','(',')','(',')','_','_','_','_','|','(',')','(',')','|', '_', '_'}
+        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
+        {' ', ' ', '|','(',' ',')','(',' ',')',' ',' ',' ',' ','|','_','_','_','_','|', ' ', ' '},
+        {'_', '_', '|','(','*',')','(',' ',')','_','_','_','_','|','(',')','(',')','|', '_', '_'}
+    };
+        public char[,] HomeThree1 = {
+        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
+        {' ', ' ', '|','(',' ',')','(',' ',')',' ',' ',' ',' ','|','_','_','_','_','|', ' ', ' '},
+        {'_', '_', '|','(',' ',')','(','*',')','_','_','_','_','|','(',')','(',')','|', '_', '_'}
+    };
+        public char[,] HomeThree2 = {
+        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
+        {' ', ' ', '|','(',' ',')','(',' ',')',' ',' ',' ',' ','|','_','_','_','_','_','_','|', ' ', ' '},
+        {'_', '_', '|','(',' ',')','(',' ',')','_','_','_','_','|','(','*',')','(',' ',')','|', '_', '_'}
+    };
+        public char[,] HomeThree3 = {
+        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
+        {' ', ' ', '|','(',' ',')','(',' ',')',' ',' ',' ',' ','|','_','_','_','_','_','_','|', ' ', ' '},
+        {'_', '_', '|','(',' ',')','(',' ',')','_','_','_','_','|','(',' ',')','(','*',')','|', '_', '_'}
     };
         public char[,] Cat = {
         { ' ', ' ', ' ', ' ', ' '},
@@ -191,7 +234,11 @@ namespace MyGameMyLive
     { '/', ConsoleColor.Yellow },
     { '(', ConsoleColor.DarkYellow }, // Коричневый цвет для туловища
     { ')', ConsoleColor.DarkYellow },
-    { '\\', ConsoleColor.Yellow }
+    { '\\', ConsoleColor.Yellow },
+    { '[', ConsoleColor.Yellow },
+    { ']', ConsoleColor.Yellow },
+    { '_', ConsoleColor.Yellow },
+
 };
         public Dictionary<char, ConsoleColor> HomeColors = new Dictionary<char, ConsoleColor>
 {

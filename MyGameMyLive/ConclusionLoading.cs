@@ -16,7 +16,7 @@ namespace MyGameMyLive
         {
             int counter = 0;
             Timer timer = new Timer(650); // Интервал таймера 1000 миллисекунд (1 секунда)
-
+            Console.Write("Идет обыск");
             timer.Elapsed += (sender, e) =>
             {
                 counter++;
@@ -26,7 +26,7 @@ namespace MyGameMyLive
                 {
                     timer.Stop(); // Остановка таймера после 3 секунд
                     timer.Dispose(); // Освобождение ресурсов таймера
-                    Console.WriteLine("\nПродолжить...");
+                    
                 }
             };
 
@@ -34,7 +34,7 @@ namespace MyGameMyLive
             timer.Enabled = true; // Включение таймера
 
             
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

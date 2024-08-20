@@ -161,11 +161,11 @@ namespace MyGameMyLive
                 {
                     colorMapping = texturs.RoadColors;
                 }
-                else if (texture == texturs.HomeOne || texture == texturs.HomeTwo || texture == texturs.HomeThree)
+                else if (texture == texturs.HomeOne || texture == texturs.HomeTwo || texture == texturs.HomeThree || texture == texturs.HomeThree1 || texture == texturs.HomeThree2 || texture == texturs.HomeThree3 || texture == texturs.HomeThreeNone)
                 {
                     colorMapping = texturs.HomeColors;
                 }
-                else if (texture == texturs.Cat || texture == texturs.Barrel)
+                else if (texture == texturs.Cat || texture == texturs.Barrel || texture == texturs.BarrelNone)
                 {
                     colorMapping = texturs.UnitColors;
                 }

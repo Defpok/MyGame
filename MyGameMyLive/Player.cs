@@ -20,10 +20,20 @@ namespace MyGameMyLive
         public int Weapon;
         public string WeaponName;
         public int PositionCursor;
+        public int PotionHealing = 1;
+        public int PotionMana = 0;
+        public int FireBall = 0;
+        public int ElectroBall = 0;
+        public int VoxduBall = 0;
+
         public char[,] PlayerImage = {
         {' ', 'о', ' '},
         {'/', '|', '\\' },
         {'/', ' ', '\\' }
+    };public char[,] PlayerImageIron = {
+        {' ', 'о', ' ', ' '},
+        {'/', '|', '\\','/'},
+        {'/', ' ', '\\',' '}
     };
         public int playerX = 0;
         public int playerY = 20;
@@ -44,6 +54,13 @@ namespace MyGameMyLive
             Damage = damage;
             PositionCursor = positionCursor;
             WeaponName = "Рукой";
+        }
+        public void ScinsInPlayer(bool checkin)
+        {
+            if (checkin)
+            {
+                PlayerImage = PlayerImageIron;
+            }
         }
         public void MovePlayer()
         {
@@ -70,6 +87,22 @@ namespace MyGameMyLive
                     break;
                 case ConsoleKey.RightArrow:
                     playerX++;
+                    break;
+                case ConsoleKey.UpArrow:
+
+                    if(PotionHealing > 0)
+                    {
+                        CurrentHealth += 50;
+                        PotionHealing--;
+                    }
+
+                    break;
+                case ConsoleKey.DownArrow:
+                    if (PotionMana > 0)
+                    {
+                        Mana += 15;
+                        PotionMana--;
+                    }
                     break;
             }
 
