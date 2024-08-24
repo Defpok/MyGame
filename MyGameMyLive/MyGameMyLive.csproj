@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConclusionLoading.cs" />
+    <Compile Include="GameObjects.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Player.cs" />
