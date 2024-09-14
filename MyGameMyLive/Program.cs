@@ -41,7 +41,6 @@ namespace MyGameMyLive
                 map.RandomSpawnObj();
                 map.DisplayMap();
 
-
             }
         }
 

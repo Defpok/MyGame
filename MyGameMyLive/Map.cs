@@ -48,6 +48,7 @@ namespace MyGameMyLive
             Flora flowersFo = new Flora(texturs.FlowersFo);
             Flora flowersFive = new Flora(texturs.FlowersFive);
             Flora flowersSix = new Flora(texturs.FlowersSix);
+            Flora noneObject = new Flora(texturs.NoneObj);
 
             flora.Add(forestOak);
             flora.Add(forestOakMini);
@@ -62,6 +63,14 @@ namespace MyGameMyLive
             flora.Add(flowersFo);
             flora.Add(flowersFive);
             flora.Add(flowersSix);
+            flora.Add(flowersSix);
+            flora.Add(noneObject);
+            flora.Add(noneObject);
+            flora.Add(noneObject);
+            flora.Add(noneObject);
+            flora.Add(noneObject);
+            flora.Add(noneObject);
+            flora.Add(noneObject);
 
             List<Home> home = new List<Home>();
 
@@ -95,6 +104,24 @@ namespace MyGameMyLive
 
             /*обернуть в вайл */
 
+            
+
+
+
+
+
+
+
+           /* int heightArrayFlovers = 120;
+            int heightArrayChecingFlovers = 0;
+            int bottomPositionFlovers = 1;
+            int positionToXFlovers = 0;
+
+            int startSpawnFlovers = 6;
+            int warrningSpawnFlovers = 12;
+            spawnFlora(flora, heightArrayFlovers, heightArrayChecingFlovers, bottomPositionFlovers, positionToXFlovers, startSpawnFlovers, warrningSpawnFlovers);
+*/
+
 
             for (int i = 0; i < valueHome; i++)
             {
@@ -103,7 +130,7 @@ namespace MyGameMyLive
                 switch(random.Next(1, 3))
                 {
                     case 1:
-                        SpawnObjToMapWord(homeBroken[randChoiseHome].ImageObj, 1, coordHom,MapsWorld);
+                        SpawnObjToMapWord(homeBroken[randChoiseHome].ImageObj, 2, coordHom,MapsWorld);
                         if (coordHomRandSpawnPlusOne == 0)
                         {
                             coordHomRandSpawnPlusOne += homeBroken[randChoiseHome].ImageObj.GetLength(1);
@@ -114,7 +141,7 @@ namespace MyGameMyLive
                         }
                         break;
                     case 2:
-                        SpawnObjToMapWord(home[randChoiseHome].ImageObj, 1, coordHom, MapsWorld);
+                        SpawnObjToMapWord(home[randChoiseHome].ImageObj, 2, coordHom, MapsWorld);
                         if (coordHomRandSpawnPlusOne == 0)
                         {
                             coordHomRandSpawnPlusOne += homeBroken[randChoiseHome].ImageObj.GetLength(1);
@@ -125,7 +152,7 @@ namespace MyGameMyLive
                         }
                         break;
                 }
-                coordHom += 30;
+                coordHom += 50;
             }
 
             
@@ -137,23 +164,32 @@ namespace MyGameMyLive
 
             int heightArray = 20;
             int heightArrayChecing = 0;
-            int bottobPosition = 0;
+            int bottomPosition = 0;
             int positionToX = 0;
-            int warrningSpawn = 6; 
-            spawnFlora(flora, heightArray, heightArrayChecing, bottobPosition, positionToX, warrningSpawn);
+            int startSpawn = 0;
+            int warrningSpawn = 20; 
+            spawnFlora(flora, heightArray, heightArrayChecing, bottomPosition, positionToX, startSpawn, warrningSpawn);
 
 
 
 
-            int heightArrayTwo = 50 - (heightArray + coordHomRandSpawnPlusOne);
 
+            int heightArrayTwo = 70 - (heightArray + coordHomRandSpawnPlusOne);
             int heightArrayChecingTwo = 0;
-            int bottobPositionTwo = 0;
+            int bottomPositionTwo = 0;
             int positionToXTwo = heightArray + coordHomRandSpawnPlusOne;
+            spawnFlora(flora, heightArrayTwo, heightArrayChecingTwo, bottomPositionTwo, positionToXTwo, startSpawn, warrningSpawn);
 
-            spawnFlora(flora, heightArrayTwo, heightArrayChecingTwo, bottobPositionTwo, positionToXTwo, warrningSpawn);
 
 
+
+
+
+            int heightArrayThree = 120 - (heightArray + coordHomRandSpawnPlusOne + heightArrayTwo + coordHomRandSpawnPlusTwo);
+            int heightArrayChecingThree = 0;
+            int bottomPositionThree = 0;
+            int positionToXThree = heightArray + coordHomRandSpawnPlusOne + heightArrayTwo + coordHomRandSpawnPlusTwo;
+            spawnFlora(flora, heightArrayThree, heightArrayChecingThree, bottomPositionThree, positionToXThree, startSpawn, warrningSpawn);
 
 
 
@@ -188,18 +224,22 @@ namespace MyGameMyLive
 
 
         }
-        public void spawnFlora(List<Flora> floras, int height, int heightCheking, int bottomPos, int x, int warning)
+        public void spawnFlora(List<Flora> floras, int height, int heightCheking, int bottomPos, int x, int start, int warning)
         {
-            for (int i = 0; i < height; i += heightCheking)
+            int check;
+            for (int i = 0; i < height; i += check)
             {
-                int rand = random.Next(0, warning);
+                check = 0;
+                int rand = random.Next(start, warning);
                 if (height - heightCheking >= floras[rand].ImageObj.GetLength(1))
                 {
-                    SpawnObjToMapWord(floras[rand].ImageObj, bottomPos, x, MapsWorld);
+                    SpawnObjToMapWord(floras[rand].ImageObj, random.Next(0, 2), x, MapsWorld);
 
 
                     heightCheking += floras[rand].ImageObj.GetLength(1);
                     x += floras[rand].ImageObj.GetLength(1);
+
+                    check += floras[rand].ImageObj.GetLength(1);
                 }
                 else
                 {

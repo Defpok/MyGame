@@ -42,6 +42,8 @@ namespace MyGameMyLive
 
         public char[,] Castle = LoadTextureFromFile("texturs/tx_castle.txt");
 
+        public char[,] NoneObj = LoadTextureFromFile("texturs/tx_none.txt");
+
 
 
 
