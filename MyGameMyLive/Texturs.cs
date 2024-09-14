@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,100 +10,42 @@ namespace MyGameMyLive
 {
     internal class Texturs
     {
-       
 
 
-        public char[,] ForesterSpruce = {
-        { ' ', ' ', '^', ' ', ' ' },
-        { ' ', '/', ' ', '\\', ' ' },
-        { '/', ' ', '|', ' ', '\\' }
-    };
-        public char[,] ForesterOak = {
-        { '\\', ' ', '|', ' ', '/' },
-        { ' ', '\\', '|', '/', ' ' },
-        { ' ', ' ', '|', ' ', ' ' }
-    };
-        public char[,] ForesterApple = {
-        { '/', '~', '~', '~', '\\' },
-        { '\\', '~', '|', '~', '/' },
-        { ' ', ' ', '|', ' ', ' ' }
-    };
 
-        public char[,] FlowersOne = {
-        { ' '},
-        { '0'},
-        { '|'},
-    };
-        public char[,] FlowersTwo = {
-        { ' '},
-        { '@'},
-        { '|'},
-    };
-        public char[,] Road = {
-        { ' '},
-        { ' '},
-        { '_'},
-    };
-        public char[,] FlowersThree = {
-        { ' ', ' ', ' ', ' ', ' ' },
-        { 'о', ' ', 'о', ' ', 'о' },
-        { ' ', '\\', '|', '/', ' ' }
-    };
-        public char[,] FlowersFo = {
-        { ' ', ' ', ' '},
-        { '{', 'о', '}'},
-        { ' ', '|', ' '},
-    }; 
-        public char[,] Barrel = {
-        { ' ',' ',' '},
-        { ' ','_',' '},
-        { '[','*',']'},
-    }; 
-        public char[,] BarrelNone = {
-        { ' ',' ',' '},
-        { ' ','_',' '},
-        { '[',' ',']'},
-    };
-        public char[,] HomeOne = {
-        {' ', ' ', '|','^','^','^','^','^','^','^','^','|', ' ', ' '},
-        {' ', ' ', '|',' ','[',']',' ','|',',','|',' ','|', ' ', ' '},
-        {'_', '_', '|','_','_','_','_','|','_','|','_','|', '_', '_'}
-    };
-        public char[,] HomeTwo = {
-        {' ', ' ', '/','~','~','~','~','~','~','\\', ' ', ' '},
-        {' ', ' ', '|','[',']',' ',' ','[',']','|', ' ', ' '},
-        {'_', '_', '|','_','_','_','_','_','_','|', '_', '_'}
-    };
-        public char[,] HomeThreeNone = {
-        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
-        {' ', ' ', '|','(',' ',')','(',' ',')',' ',' ',' ',' ','|','_','_','_','_','|', ' ', ' '},
-        {'_', '_', '|','(',' ',')','(',' ',')','_','_','_','_','|','(',')','(',')','|', '_', '_'}
-    };
-        public char[,] HomeThree = {
-        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
-        {' ', ' ', '|','(',' ',')','(',' ',')',' ',' ',' ',' ','|','_','_','_','_','|', ' ', ' '},
-        {'_', '_', '|','(','*',')','(',' ',')','_','_','_','_','|','(',')','(',')','|', '_', '_'}
-    };
-        public char[,] HomeThree1 = {
-        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
-        {' ', ' ', '|','(',' ',')','(',' ',')',' ',' ',' ',' ','|','_','_','_','_','|', ' ', ' '},
-        {'_', '_', '|','(',' ',')','(','*',')','_','_','_','_','|','(',')','(',')','|', '_', '_'}
-    };
-        public char[,] HomeThree2 = {
-        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
-        {' ', ' ', '|','(',' ',')','(',' ',')',' ',' ',' ',' ','|','_','_','_','_','_','_','|', ' ', ' '},
-        {'_', '_', '|','(',' ',')','(',' ',')','_','_','_','_','|','(','*',')','(',' ',')','|', '_', '_'}
-    };
-        public char[,] HomeThree3 = {
-        {' ', ' ', '=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=','=', ' ', ' '},
-        {' ', ' ', '|','(',' ',')','(',' ',')',' ',' ',' ',' ','|','_','_','_','_','_','_','|', ' ', ' '},
-        {'_', '_', '|','(',' ',')','(',' ',')','_','_','_','_','|','(',' ',')','(','*',')','|', '_', '_'}
-    };
-        public char[,] Cat = {
-        { ' ', ' ', ' ', ' ', ' '},
-        { ' ', ',', '_', 'о', ' '},
-        { ' ', '`', ' ', '`', ' '},
-    };
+        public char[,] ForesterSpruce = LoadTextureFromFile("texturs/tx_forester_spruce.txt");
+        public char[,] ForesterSpruceMini = LoadTextureFromFile("texturs/tx_forester_spruce_mini.txt");
+        public char[,] ForesterOak = LoadTextureFromFile("texturs/tx_forester_oak.txt");
+        public char[,] ForesterOakMini = LoadTextureFromFile("texturs/tx_forester_oak_mini.txt");
+        public char[,] ForesterApple = LoadTextureFromFile("texturs/tx_forester_apple.txt");
+        public char[,] ForesterAppleMini = LoadTextureFromFile("texturs/tx_forester_apple_mini.txt");
+
+
+
+        public char[,] FlowersOne = LoadTextureFromFile("texturs/tx_flowers_one.txt");
+        public char[,] FlowersTwo = LoadTextureFromFile("texturs/tx_flowers_two.txt");
+        public char[,] FlowersThree = LoadTextureFromFile("texturs/tx_flowers_three.txt");
+        public char[,] FlowersFo = LoadTextureFromFile("texturs/tx_flowers_fo.txt");
+        public char[,] FlowersFive = LoadTextureFromFile("texturs/tx_flowers_five.txt");
+        public char[,] FlowersSix = LoadTextureFromFile("texturs/tx_flowers_six.txt");
+
+        public char[,] Box = LoadTextureFromFile("texturs/tx_box.txt");
+        public char[,] BoxEmpty = LoadTextureFromFile("texturs/tx_box_empty.txt");
+
+        public char[,] HomeOne = LoadTextureFromFile("texturs/tx_home_one.txt");
+        public char[,] HomeTwo = LoadTextureFromFile("texturs/tx_home_two.txt");
+        public char[,] HomeThree = LoadTextureFromFile("texturs/tx_home_three.txt");
+
+        public char[,] HomeOneBroken = LoadTextureFromFile("texturs/tx_home_one_broken.txt");
+        public char[,] HomeTwoBroken = LoadTextureFromFile("texturs/tx_home_two_broken.txt");
+        public char[,] HomeThreeBroken = LoadTextureFromFile("texturs/tx_home_three_broken.txt");
+
+        public char[,] Castle = LoadTextureFromFile("texturs/tx_castle.txt");
+
+
+
+
+
         public char[,] UnitImageUpyry = {
         {' ', 'о', ' '},
         {'/', '|', '\\'},
@@ -120,69 +63,28 @@ namespace MyGameMyLive
     };
 
 
+        public static char[,] LoadTextureFromFile(string filePath)
+        {
+            // Чтение текстуры из файла
+            string[] textureLines = File.ReadAllLines(filePath);
 
+            // Создаем двумерный массив, размеры которого соответствуют строкам и символам в текстуре
+            char[,] textureArray = new char[textureLines.Length, textureLines[0].Length];
 
+            // Заполняем двумерный массив символами из текстуры
+            for (int i = 0; i < textureLines.Length; i++)
+            {
+                for (int j = 0; j < textureLines[i].Length; j++)
+                {
+                    textureArray[i, j] = textureLines[i][j];
+                }
+            }
 
-        public Dictionary<char, ConsoleColor> TreeColors = new Dictionary<char, ConsoleColor>
-{
-    { '^', ConsoleColor.Green },
-    { 'о', ConsoleColor.Red },
-    { '~', ConsoleColor.Red },
-    { '/', ConsoleColor.Green },
-    { '\\', ConsoleColor.Green },
-    { '|', ConsoleColor.DarkYellow } // Коричневый цвет для ствола
-};        
-        public Dictionary<char, ConsoleColor> FlofersColors = new Dictionary<char, ConsoleColor>
-{
-    { 'о', ConsoleColor.Red },
-    { '@', ConsoleColor.Red },
-    { '/', ConsoleColor.Green },
-    { '{', ConsoleColor.Green },
-    { '}', ConsoleColor.Green },
-    { '\\', ConsoleColor.Green },
-    { '|', ConsoleColor.Green } // Коричневый цвет для ствола
-};
-
-        public Dictionary<char, ConsoleColor> PlayerColors = new Dictionary<char, ConsoleColor>
-{
-    { 'о', ConsoleColor.DarkYellow },
-    { '|', ConsoleColor.DarkCyan }, // Коричневый цвет для туловища
-    { '/', ConsoleColor.DarkCyan },
-    { '\\', ConsoleColor.DarkCyan }
-};        
-        public Dictionary<char, ConsoleColor> RoadColors = new Dictionary<char, ConsoleColor>
-{
-    { '_', ConsoleColor.Green },
-};
-        public Dictionary<char, ConsoleColor> UnitColors = new Dictionary<char, ConsoleColor>
-{
-    { 'о', ConsoleColor.Red },
-    { '|', ConsoleColor.Yellow }, // Коричневый цвет для туловища
-    { '/', ConsoleColor.Yellow },
-    { '(', ConsoleColor.DarkYellow }, // Коричневый цвет для туловища
-    { ')', ConsoleColor.DarkYellow },
-    { '\\', ConsoleColor.Yellow },
-    { '[', ConsoleColor.Yellow },
-    { ']', ConsoleColor.Yellow },
-    { '_', ConsoleColor.Yellow },
-
-};
-        public Dictionary<char, ConsoleColor> HomeColors = new Dictionary<char, ConsoleColor>
-{
-    { '|', ConsoleColor.DarkYellow },
-    { '(', ConsoleColor.DarkYellow }, // Коричневый цвет для туловища
-    { ')', ConsoleColor.DarkYellow },
-    { '/', ConsoleColor.DarkYellow },
-    { '\\', ConsoleColor.DarkYellow },
-    { '[', ConsoleColor.Blue },
-    { ']', ConsoleColor.Blue }
-};
-
-
-
-
-        
-
+            // Возвращаем готовый двумерный массив
+            return textureArray;
+        }
     }
 
+
 }
+

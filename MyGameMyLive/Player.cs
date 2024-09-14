@@ -9,7 +9,14 @@ namespace MyGameMyLive
 {
     internal class Player
     {
-        
+        public char[,] image;
        
+
+        public void move()
+        {
+            
+
+        }
+
     }
 }

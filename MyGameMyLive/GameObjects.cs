@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,51 +13,44 @@ namespace MyGameMyLive
         public int X, Y;
         public string NameObject;
 
-
-    }
-
-    internal class Forest : GameObjects
-    {
-        public Forest(char[,] imageObj, int x, int y, string nameObject) 
-        { 
-            ImageObj = imageObj;
-            X = x;
-            Y = y;
-            NameObject = nameObject;
+        public bool CheckUserPlaceToGameObj(int coordUser)
+        {
+            if (X  == coordUser - 5)
+            {
+                return true;
+            }
+            return false;
         }
-        
-
     }
-    internal class Flowers : GameObjects
+
+
+    internal class Flora : GameObjects
     {
-        public Flowers(char[,] imageObj, int x, int y, string nameObject)
+        public Flora(char[,] imageObj)
         {
             ImageObj = imageObj;
-            X = x;
-            Y = y;
-            NameObject = nameObject;
+            Y = 9;
         }
 
     }
     internal class Road : GameObjects
     {
-        public Road(char[,] imageObj, int x, int y, string nameObject)
+        public Road(char[,] imageObj, string nameObject)
         {
             ImageObj = imageObj;
-            X = x;
-            Y = y;
             NameObject = nameObject;
         }
 
     }
     internal class Home : GameObjects
     {
-        public Home(char[,] imageObj, int x, int y, string nameObject)
+        public int CoordDoor;
+        public Home(char[,] imageObj, string nameObject)
         {
             ImageObj = imageObj;
-            X = x;
-            Y = y;
             NameObject = nameObject;
+            Y = 2;
+            
         }
 
     }
