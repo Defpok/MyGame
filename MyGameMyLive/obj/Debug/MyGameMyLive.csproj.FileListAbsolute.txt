@@ -104,3 +104,8 @@ C:\MyGame\MyGameMyLive\bin\Debug\System.Security.AccessControl.xml
 C:\MyGame\MyGameMyLive\bin\Debug\System.Security.Principal.Windows.xml
 C:\MyGame\MyGameMyLive\obj\Debug\MyGameMy.622E1C83.Up2Date
 C:\MyGame\MyGameMyLive\bin\Debug\texturs\tx_none.txt
+C:\MyGame\MyGameMyLive\bin\Debug\texturs\display\Maps.txt
+C:\MyGame\MyGameMyLive\bin\Debug\texturs\display\icon_unit.txt
+C:\MyGame\MyGameMyLive\bin\Debug\texturs\display\icon_displayInfo.txt
+C:\MyGame\MyGameMyLive\bin\Debug\texturs\tx_Sun.txt
+C:\MyGame\MyGameMyLive\bin\Debug\texturs\tx_Moon.txt

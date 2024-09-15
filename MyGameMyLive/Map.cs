@@ -13,19 +13,14 @@ namespace MyGameMyLive
 {
     internal class Map
     {
-        public char[,] MapsWorld = new char[9, 120];
+        public char[,] MapsWorld;
         private List<GameObjects> placedObjects = new List<GameObjects>();
         private Random random = new Random();
 
         public Map()
         {
-            for (int i = 0; i < MapsWorld.GetLength(0); i++)
-            {
-                for (int j = 0; j < MapsWorld.GetLength(1); j++)
-                {
-                    MapsWorld[i, j] = ' ';
-                }
-            }
+           Texturs texturs = new Texturs();
+            MapsWorld = texturs.Maps;
         }
 
         public void RandomSpawnObj()
@@ -104,7 +99,6 @@ namespace MyGameMyLive
 
             /*обернуть в вайл */
 
-            
 
 
 
@@ -112,15 +106,16 @@ namespace MyGameMyLive
 
 
 
-           /* int heightArrayFlovers = 120;
-            int heightArrayChecingFlovers = 0;
-            int bottomPositionFlovers = 1;
-            int positionToXFlovers = 0;
 
-            int startSpawnFlovers = 6;
-            int warrningSpawnFlovers = 12;
-            spawnFlora(flora, heightArrayFlovers, heightArrayChecingFlovers, bottomPositionFlovers, positionToXFlovers, startSpawnFlovers, warrningSpawnFlovers);
-*/
+            /* int heightArrayFlovers = 120;
+             int heightArrayChecingFlovers = 0;
+             int bottomPositionFlovers = 1;
+             int positionToXFlovers = 0;
+
+             int startSpawnFlovers = 6;
+             int warrningSpawnFlovers = 12;
+             spawnFlora(flora, heightArrayFlovers, heightArrayChecingFlovers, bottomPositionFlovers, positionToXFlovers, startSpawnFlovers, warrningSpawnFlovers);
+ */
 
 
             for (int i = 0; i < valueHome; i++)
@@ -130,7 +125,7 @@ namespace MyGameMyLive
                 switch(random.Next(1, 3))
                 {
                     case 1:
-                        SpawnObjToMapWord(homeBroken[randChoiseHome].ImageObj, 2, coordHom,MapsWorld);
+                        SpawnObjToMapWord(homeBroken[randChoiseHome].ImageObj, 6, coordHom,MapsWorld);
                         if (coordHomRandSpawnPlusOne == 0)
                         {
                             coordHomRandSpawnPlusOne += homeBroken[randChoiseHome].ImageObj.GetLength(1);
@@ -141,7 +136,7 @@ namespace MyGameMyLive
                         }
                         break;
                     case 2:
-                        SpawnObjToMapWord(home[randChoiseHome].ImageObj, 2, coordHom, MapsWorld);
+                        SpawnObjToMapWord(home[randChoiseHome].ImageObj, 6, coordHom, MapsWorld);
                         if (coordHomRandSpawnPlusOne == 0)
                         {
                             coordHomRandSpawnPlusOne += homeBroken[randChoiseHome].ImageObj.GetLength(1);
@@ -155,7 +150,7 @@ namespace MyGameMyLive
                 coordHom += 50;
             }
 
-            
+
 
 
 
@@ -164,10 +159,10 @@ namespace MyGameMyLive
 
             int heightArray = 20;
             int heightArrayChecing = 0;
-            int bottomPosition = 0;
-            int positionToX = 0;
+            int bottomPosition = 6;
+            int positionToX = 1;
             int startSpawn = 0;
-            int warrningSpawn = 20; 
+            int warrningSpawn = 14;
             spawnFlora(flora, heightArray, heightArrayChecing, bottomPosition, positionToX, startSpawn, warrningSpawn);
 
 
@@ -176,7 +171,7 @@ namespace MyGameMyLive
 
             int heightArrayTwo = 70 - (heightArray + coordHomRandSpawnPlusOne);
             int heightArrayChecingTwo = 0;
-            int bottomPositionTwo = 0;
+            int bottomPositionTwo = 6;
             int positionToXTwo = heightArray + coordHomRandSpawnPlusOne;
             spawnFlora(flora, heightArrayTwo, heightArrayChecingTwo, bottomPositionTwo, positionToXTwo, startSpawn, warrningSpawn);
 
@@ -185,9 +180,9 @@ namespace MyGameMyLive
 
 
 
-            int heightArrayThree = 120 - (heightArray + coordHomRandSpawnPlusOne + heightArrayTwo + coordHomRandSpawnPlusTwo);
+            int heightArrayThree = 118 - (heightArray + coordHomRandSpawnPlusOne + heightArrayTwo + coordHomRandSpawnPlusTwo);
             int heightArrayChecingThree = 0;
-            int bottomPositionThree = 0;
+            int bottomPositionThree = 6;
             int positionToXThree = heightArray + coordHomRandSpawnPlusOne + heightArrayTwo + coordHomRandSpawnPlusTwo;
             spawnFlora(flora, heightArrayThree, heightArrayChecingThree, bottomPositionThree, positionToXThree, startSpawn, warrningSpawn);
 
@@ -224,6 +219,7 @@ namespace MyGameMyLive
 
 
         }
+
         public void spawnFlora(List<Flora> floras, int height, int heightCheking, int bottomPos, int x, int start, int warning)
         {
             int check;
@@ -233,7 +229,7 @@ namespace MyGameMyLive
                 int rand = random.Next(start, warning);
                 if (height - heightCheking >= floras[rand].ImageObj.GetLength(1))
                 {
-                    SpawnObjToMapWord(floras[rand].ImageObj, random.Next(0, 2), x, MapsWorld);
+                    SpawnObjToMapWord(floras[rand].ImageObj, bottomPos + random.Next(0, 3), x, MapsWorld);
 
 
                     heightCheking += floras[rand].ImageObj.GetLength(1);
@@ -249,8 +245,40 @@ namespace MyGameMyLive
             }
         }
 
+        public int X = 110;
+        public int visableMoonSun = 2;
 
 
+        public void MoveSunAndMoon(char[,] oj, int Y, char[,] obj)
+        {
+
+            char[,] chars = oj;
+
+            if(visableMoonSun % 2 == 0)
+            {
+                chars = oj;
+            }
+            else
+            {
+                chars = obj;
+            }
+
+            Console.SetCursorPosition(X, Y);
+            for (int i = 0; i < chars.GetLength(0); i++)
+            {
+                Console.SetCursorPosition(X, Y + i);
+                for (int j = 0; j < chars.GetLength(1); j++)
+                {
+                    Console.Write(chars[i, j]);
+                }
+            }
+            X--;
+            if (X == 5) 
+            {
+                X = 110;
+                visableMoonSun++;
+            }
+        }
 
         public void SpawnObjToMapWord(char[,] obj, int y, int x, char[,] objSpawn)
         {
@@ -264,16 +292,19 @@ namespace MyGameMyLive
             }
             
         }
-        public void DisplayMap()
+        public void DisplayMap(int startX, int startY, char[,] obj )
         {
-            for (int i = 0; i < MapsWorld.GetLength(0); i++)
+            for (int i = 0; i < obj.GetLength(0); i++)
             {
-                for (int j = 0; j < MapsWorld.GetLength(1); j++)
+                for (int j = 0; j < obj.GetLength(1); j++)
                 {
-                    Console.Write(MapsWorld[i, j]);
+                    // Устанавливаем курсор на позицию перед выводом каждого символа
+                    Console.SetCursorPosition(startX + j, startY + i);
+                    Console.Write(obj[i, j]);
                 }
-                Console.WriteLine();
+                // Не нужно Console.WriteLine(), так как позиция курсора уже установлена
             }
         }
+
     }
 }

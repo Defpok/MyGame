@@ -15,78 +15,87 @@ namespace MyGameMyLive
 {
     internal class Program
     {
-        static int playerRow = 0; // Начальная строка игрока
-        static int playerCol = 0; // Начальный столбец игрока
 
-        static char[,] playerImage = {
-            {' ', 'о', ' '},
-            {'/', '|', '\\'},
-            {'/', ' ', '\\'}
-        };
-
+        static char[,] PlayerImage = {
+        {' ', 'о', ' '},
+        {'/', '|', '\\' },
+        {'/', ' ', '\\' }
+    };
+        static int playerX = 1;
+        static int playerY = 16;
 
 
         static void Main(string[] args)
         {
-            Console.SetWindowSize(140, 40);
-            
+            Console.SetWindowSize(120, 40);
+            Console.CursorVisible = false;
             Map map = new Map();
 
-            DrawPlayer();
+/*            DrawPlayer();*/
+                map.RandomSpawnObj();
             while (true)
             {
-                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-                HandleInput(keyInfo.Key);
+                /*                ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+                                HandleInput(keyInfo.Key);*/
+               
 
-                map.RandomSpawnObj();
-                map.DisplayMap();
+                Texturs texturs = new Texturs();
+                
+                map.DisplayMap(0, 15, map.MapsWorld);
+                map.MoveSunAndMoon(texturs.Sun, 16, texturs.Moon);
+
+                MovePlayer();
+
+                char[,] icon1 = texturs.Icons;
+                char[,] icon2 = texturs.Icons;
+                char[,] icon3 = texturs.IconsInfoDiplay;
+
+                int pos = 119 - icon1.GetLength(1);
+                map.DisplayMap(0, 0, icon1);
+                map.DisplayMap(pos, 0, icon2);
+                map.DisplayMap(30, 0, icon3);
+
+                /*Console.SetCursorPosition(0, 7);*/
+
+
 
             }
         }
 
-        static void DrawPlayer()
+        static void MovePlayer()
         {
-            for (int i = 0; i < playerImage.GetLength(0); i++)
+            Console.SetCursorPosition(playerX, playerY);
+            for (int i = 0; i < PlayerImage.GetLength(0); i++)
             {
-                Console.SetCursorPosition(playerCol, playerRow + i);
-                for (int j = 0; j < playerImage.GetLength(1); j++)
+                Console.SetCursorPosition(playerX, playerY + i);
+                for (int j = 0; j < PlayerImage.GetLength(1); j++)
                 {
-                    Console.Write(playerImage[i, j]);
+                    Console.Write(PlayerImage[i, j]);
                 }
             }
-        }
-
-        static void ClearPlayer()
-        {
-            for (int i = 0; i < playerImage.GetLength(0); i++)
+            ConsoleKeyInfo cahrKey = Console.ReadKey();
+            switch (cahrKey.Key)
             {
-                Console.SetCursorPosition(playerCol, playerRow + i);
-                Console.Write("   "); // Очистка позиции персонажа (замена на пробелы)
-            }
-        }
+                case ConsoleKey.LeftArrow:
+                    
+                        playerX--;
+                    break;
+                case ConsoleKey.RightArrow:
+                    playerX++;
+                    break;
+                case ConsoleKey.UpArrow:
+                    playerY--;
+                    break;
+                case ConsoleKey.DownArrow:
+                    playerY++;
+                    break;
 
-        static void HandleInput(ConsoleKey key)
-        {
-            ClearPlayer(); // Удаляем старую позицию игрока
 
-            switch (key)
-            {
-                case ConsoleKey.A: // Влево
-                    if (playerCol > 0) playerCol--;
-                    break;
-                case ConsoleKey.D: // Вправо
-                    if (playerCol < Console.WindowWidth - playerImage.GetLength(1)) playerCol++;
-                    break;
-                case ConsoleKey.W: // Вверх
-                    if (playerRow > 0) playerRow--;
-                    break;
-                case ConsoleKey.S: // Вниз
-                    if (playerRow < Console.WindowHeight - playerImage.GetLength(0)) playerRow++;
-                    break;
             }
 
-            DrawPlayer(); // Рисуем игрока на новой позиции
         }
+
+        
 
 
     }

@@ -43,6 +43,11 @@ namespace MyGameMyLive
         public char[,] Castle = LoadTextureFromFile("texturs/tx_castle.txt");
 
         public char[,] NoneObj = LoadTextureFromFile("texturs/tx_none.txt");
+        public char[,] Maps = LoadTextureFromFile("texturs/display/Maps.txt");
+        public char[,] Sun = LoadTextureFromFile("texturs/tx_Sun.txt");
+        public char[,] Moon = LoadTextureFromFile("texturs/tx_Moon.txt");
+        public char[,] Icons = LoadTextureFromFile("texturs/display/icon_unit.txt");
+        public char[,] IconsInfoDiplay = LoadTextureFromFile("texturs/display/icon_displayInfo.txt");
 
 
 
