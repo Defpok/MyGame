@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NAudio.Gui;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,22 +12,38 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace MyGameMyLive
 {
-    internal class Map
+    public class Map
     {
         public char[,] MapsWorld;
         private List<GameObjects> placedObjects = new List<GameObjects>();
         private Random random = new Random();
-
+        public char[,] Icon1;
+        public char[,] Icon2;
+        public char[,] Icon3;
+        public int posUI;
+        public int poscolor;
+        public int poscolor1;
+        public int poscolor2;
+        public int poscolor3;
+        public int poscolor4;
+        public int poscolor5;
         public Map()
         {
            Texturs texturs = new Texturs();
             MapsWorld = texturs.Maps;
+            Icon1 = texturs.Icons;
+            Icon2 = texturs.Icons;
+            Icon3 = texturs.IconsInfoDiplay;
+            posUI = 119 - Icon1.GetLength(1);
         }
 
         public void RandomSpawnObj()
         {
             Texturs texturs = new Texturs();
+
             List<Flora> flora = new List<Flora>();
+
+            
 
             Map map = new Map();
 
@@ -36,6 +53,7 @@ namespace MyGameMyLive
             Flora forestSpruceMini = new Flora(texturs.ForesterSpruceMini);
             Flora forestApple = new Flora(texturs.ForesterApple);
             Flora forestAppleMini = new Flora(texturs.ForesterAppleMini);
+            Flora gallows = new Flora(texturs.Gallows);
 
             Flora flowersOne = new Flora(texturs.FlowersOne);
             Flora flowersTwo = new Flora(texturs.FlowersTwo);
@@ -51,6 +69,8 @@ namespace MyGameMyLive
             flora.Add(forestSpruceMini);
             flora.Add(forestApple);
             flora.Add(forestAppleMini);
+
+            flora.Add(gallows);
 
             flora.Add(flowersOne);
             flora.Add(flowersTwo);
@@ -136,7 +156,11 @@ namespace MyGameMyLive
                         }
                         break;
                     case 2:
+
                         SpawnObjToMapWord(home[randChoiseHome].ImageObj, 6, coordHom, MapsWorld);
+
+                        
+
                         if (coordHomRandSpawnPlusOne == 0)
                         {
                             coordHomRandSpawnPlusOne += homeBroken[randChoiseHome].ImageObj.GetLength(1);
@@ -155,14 +179,14 @@ namespace MyGameMyLive
 
 
 
-
+            
 
             int heightArray = 20;
             int heightArrayChecing = 0;
             int bottomPosition = 6;
             int positionToX = 1;
             int startSpawn = 0;
-            int warrningSpawn = 14;
+            int warrningSpawn = 15;
             spawnFlora(flora, heightArray, heightArrayChecing, bottomPosition, positionToX, startSpawn, warrningSpawn);
 
 
@@ -184,7 +208,15 @@ namespace MyGameMyLive
             int heightArrayChecingThree = 0;
             int bottomPositionThree = 6;
             int positionToXThree = heightArray + coordHomRandSpawnPlusOne + heightArrayTwo + coordHomRandSpawnPlusTwo;
-            spawnFlora(flora, heightArrayThree, heightArrayChecingThree, bottomPositionThree, positionToXThree, startSpawn, warrningSpawn);
+            spawnFlora(flora, heightArrayThree - 1, heightArrayChecingThree, bottomPositionThree, positionToXThree, startSpawn, warrningSpawn);
+
+            poscolor = heightArray;
+            poscolor1 = heightArrayTwo;
+            poscolor2 = heightArrayThree;
+            poscolor3 = coordHomRandSpawnPlusOne;
+            poscolor4 = coordHomRandSpawnPlusTwo;
+           
+
 
 
 
@@ -233,8 +265,8 @@ namespace MyGameMyLive
 
 
                     heightCheking += floras[rand].ImageObj.GetLength(1);
+                    floras[rand].X = x;
                     x += floras[rand].ImageObj.GetLength(1);
-
                     check += floras[rand].ImageObj.GetLength(1);
                 }
                 else
@@ -242,6 +274,35 @@ namespace MyGameMyLive
                     return;
                 }
 
+            }
+        }
+        public void DisplayUI()
+        {
+            DisplayMapUI(0, 0, Icon1);
+            DisplayMapUI(posUI, 0, Icon2);
+            DisplayMapUI(30, 0, Icon3);
+        }
+        public void DisplayUIClear()
+        {
+
+            ClearArrayUI(Icon1);
+            ClearArrayUI(Icon2);
+            ClearArrayUI(Icon3);
+
+        }
+        public void ClearArrayUI(char[,] obj)
+        {
+            int rows = obj.GetLength(0);  // Количество строк
+            int cols = obj.GetLength(1);  // Количество столбцов
+
+            // Проходим по каждой строке, начиная со второй и заканчивая предпоследней
+            for (int i = 1; i < rows - 1; i++)
+            {
+                // Проходим по каждому столбцу, начиная со второго и заканчивая предпоследним
+                for (int j = 1; j < cols - 1; j++)
+                {
+                    obj[i, j] = ' ';  // Заменяем символ на пробел
+                }
             }
         }
 
@@ -292,7 +353,7 @@ namespace MyGameMyLive
             }
             
         }
-        public void DisplayMap(int startX, int startY, char[,] obj )
+        public void DisplayMapUI(int startX, int startY, char[,] obj)
         {
             for (int i = 0; i < obj.GetLength(0); i++)
             {
@@ -304,7 +365,69 @@ namespace MyGameMyLive
                 }
                 // Не нужно Console.WriteLine(), так как позиция курсора уже установлена
             }
+
+        }
+        public void DisplayMap(int startX, int startY, char[,] obj)
+        {
+            // Установка цветов для окрашивания
+            ConsoleColor color1 = ConsoleColor.Green;
+            ConsoleColor color2 = ConsoleColor.DarkYellow;
+
+            for (int i = 0; i < obj.GetLength(0); i++)
+            {
+                for (int j = 0; j < obj.GetLength(1); j++)
+                {
+                    // Устанавливаем курсор на позицию перед выводом каждого символа
+                    Console.SetCursorPosition(startX + j, startY + i);
+
+                    // Проверяем, является ли символ решеткой
+                    if (obj[i, j] == '#')
+                    {
+                        Console.Write(obj[i, j]); // Просто выводим решетку
+                    }
+                    else
+                    {
+                        // Определяем цвет для текущей позиции
+                        if (j < poscolor)
+                        {
+                            Console.ForegroundColor = color1; // Зелёный до 20
+                        }
+                        else if (j >= poscolor && j < poscolor3 + poscolor)
+                        {
+                            Console.ForegroundColor = color2; // Жёлтый от 20 до 40
+                        }
+                        else if (j >= poscolor3 + poscolor && j < poscolor3 + poscolor + poscolor1)
+                        {
+                            Console.ForegroundColor = color1; // Жёлтый от 20 до 40
+                        }
+                        else if (j >= poscolor3 + poscolor + poscolor1 && j < poscolor3 + poscolor + poscolor1 + poscolor4)
+                        {
+                            Console.ForegroundColor = color2; // Жёлтый от 20 до 40
+                        }
+                        else if (j >= poscolor3 + poscolor + poscolor1 + poscolor4 && j < poscolor3 + poscolor + poscolor1 + poscolor4 + poscolor2 -1)
+                        {
+                            Console.ForegroundColor = color1; // Жёлтый от 20 до 40
+                        }
+                        else 
+                        {
+                            Console.ResetColor(); 
+                        }
+
+                        Console.Write(obj[i, j]); // Выводим символ
+                    }
+                }
+                // Сброс цвета после строки
+                Console.ResetColor();
+            }
+
+            // Сброс цвета в консоли
+            Console.ResetColor();
         }
 
     }
 }
+/*poscolor = heightArray;
+poscolor1 = heightArrayTwo;
+poscolor2 = heightArrayThree;
+poscolor3 = coordHomRandSpawnPlusOne;
+poscolor4 = coordHomRandSpawnPlusTwo;*/

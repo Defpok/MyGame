@@ -19,6 +19,7 @@ namespace MyGameMyLive
         public char[,] ForesterOakMini = LoadTextureFromFile("texturs/tx_forester_oak_mini.txt");
         public char[,] ForesterApple = LoadTextureFromFile("texturs/tx_forester_apple.txt");
         public char[,] ForesterAppleMini = LoadTextureFromFile("texturs/tx_forester_apple_mini.txt");
+        public char[,] Gallows = LoadTextureFromFile("texturs/tx_gallows.txt");
 
 
 
@@ -47,27 +48,51 @@ namespace MyGameMyLive
         public char[,] Sun = LoadTextureFromFile("texturs/tx_Sun.txt");
         public char[,] Moon = LoadTextureFromFile("texturs/tx_Moon.txt");
         public char[,] Icons = LoadTextureFromFile("texturs/display/icon_unit.txt");
+
         public char[,] IconsInfoDiplay = LoadTextureFromFile("texturs/display/icon_displayInfo.txt");
+        public char[,] IconsInfoInvent = LoadTextureFromFile("texturs/display/Icon_displayInventory.txt");
+
+
+        
+
+        public char[,] PlayerImage = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_playerImg.txt");
+        public char[,] PlayerImageShield = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_playerImg_shield.txt");
+        public char[,] PlayerImageSword = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_playerImg_sword.txt");
+
+        public char[,] PlayerImageShieldAndAxe = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_playerImg_shieldAndAxe.txt");
+        public char[,] PlayerImageShieldAndMorgen = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_playerImg_shieldAndMorgen.txt");
+        public char[,] PlayerImageShieldAndSword = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_playerImg_shieldAndSword.txt");
+        public char[,] PlayerImageAxe = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_playerImg_axe.txt");
+        public char[,] PlayerImageMorgen = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_playerImg_morgen.txt");
 
 
 
 
 
-        public char[,] UnitImageUpyry = {
-        {' ', 'о', ' '},
-        {'/', '|', '\\'},
-        {'/', ' ', '\\'}
-    };
-        public char[,] UnitImageChort = {
-        {' ', 'О',' ', ' '},
-        {'/', '(', ')', '\\'},
-        {'/', ' ', ' ', '\\'}
-    };
-        public char[,] UnitImageBes = {
-        {' ', ' ', '_','О', '_', ' ', ' '},
-        {'/', '(', '_','_','_',')', '\\'},
-        {' ', '/', ' ', ' ',' ', '\\',' ',}
-    };
+
+
+
+        public char[,] Rustic = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_playerImg_shieldAndSword.txt");
+        public char[,] RusticOld = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_playerImg_shieldAndSword.txt");
+
+        public char[,] EnemyOne = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemyOne.txt");
+        public char[,] EnemyOneSword = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemyOne_sword.txt");
+        public char[,] EnemyTwo = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemyTwo.txt");
+        public char[,] EnemyTwoSword = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemyTwo_sword.txt");
+        public char[,] EnemyThree = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemyThree.txt");
+        public char[,] EnemyFo = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemyFo.txt");
+        public char[,] EnemyFoSword = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemyFо_sword.txt");
+        public char[,] EnemyFive = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemyFive.txt");
+        public char[,] EnemySix = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemySix.txt");
+        public char[,] EnemySeven = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemySeven.txt");
+        public char[,] EnemyBoss = LoadTextureFromFile("texturs/PlayerAndUnitImg/tx_unitEnemyBoss.txt");
+        
+
+
+
+
+
+
 
 
         public static char[,] LoadTextureFromFile(string filePath)
