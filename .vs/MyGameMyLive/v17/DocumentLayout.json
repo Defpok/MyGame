@@ -3,16 +3,56 @@
   "WorkspaceRootPath": "G:\\Fork\\MyGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\texturs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\texturs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|g:\\fork\\mygame\\mygamemylive\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\texturs\\tx_castle.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\texturs\\tx_castle.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\texturs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\texturs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\battleandaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\battleandaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\gameobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\gameobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\texturs\\display\\maps.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\texturs\\display\\maps.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\texturs\\display\\icon_displayinventory.txt||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\texturs\\display\\icon_displayinventory.txt||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\write.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\write.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\musics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\musics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\conclusionloading.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,18 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|G:\\Fork\\MyGame\\mygamemylive\\write.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6B25FAA-8C19-41EE-A11E-7E06E2C7F5DD}|MyGameMyLive\\MyGameMyLive.csproj|solutionrelative:mygamemylive\\write.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,58 +70,103 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "tx_castle.txt",
+              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\texturs\\tx_castle.txt",
+              "RelativeDocumentMoniker": "MyGameMyLive\\texturs\\tx_castle.txt",
+              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\texturs\\tx_castle.txt",
+              "RelativeToolTip": "MyGameMyLive\\texturs\\tx_castle.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-04T14:08:38.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Icon_displayInventory.txt",
+              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\texturs\\display\\Icon_displayInventory.txt",
+              "RelativeDocumentMoniker": "MyGameMyLive\\texturs\\display\\Icon_displayInventory.txt",
+              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\texturs\\display\\Icon_displayInventory.txt",
+              "RelativeToolTip": "MyGameMyLive\\texturs\\display\\Icon_displayInventory.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-02T11:20:47.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Maps.txt",
+              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\texturs\\display\\Maps.txt",
+              "RelativeDocumentMoniker": "MyGameMyLive\\texturs\\display\\Maps.txt",
+              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\texturs\\display\\Maps.txt",
+              "RelativeToolTip": "MyGameMyLive\\texturs\\display\\Maps.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-02T06:18:06.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\Enemy.cs",
+              "RelativeDocumentMoniker": "MyGameMyLive\\Enemy.cs",
+              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\Enemy.cs",
+              "RelativeToolTip": "MyGameMyLive\\Enemy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T16:31:56.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Musics.cs",
+              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\Musics.cs",
+              "RelativeDocumentMoniker": "MyGameMyLive\\Musics.cs",
+              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\Musics.cs",
+              "RelativeToolTip": "MyGameMyLive\\Musics.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAswIEAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-21T18:55:33.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Texturs.cs",
               "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\Texturs.cs",
               "RelativeDocumentMoniker": "MyGameMyLive\\Texturs.cs",
               "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\Texturs.cs",
               "RelativeToolTip": "MyGameMyLive\\Texturs.cs",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAgwDsAAAAnAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAswCAAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T15:27:52.094Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Write.cs",
-              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\Write.cs",
-              "RelativeDocumentMoniker": "MyGameMyLive\\Write.cs",
-              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\Write.cs",
-              "RelativeToolTip": "MyGameMyLive\\Write.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwCgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T15:27:21.249Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T15:27:52.094Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Unit.cs",
-              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\Unit.cs",
-              "RelativeDocumentMoniker": "MyGameMyLive\\Unit.cs",
-              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\Unit.cs",
-              "RelativeToolTip": "MyGameMyLive\\Unit.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Title": "GameObjects.cs",
+              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\GameObjects.cs",
+              "RelativeDocumentMoniker": "MyGameMyLive\\GameObjects.cs",
+              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\GameObjects.cs",
+              "RelativeToolTip": "MyGameMyLive\\GameObjects.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAIwGgAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T15:27:20.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-26T16:43:25.19Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\Program.cs",
               "RelativeDocumentMoniker": "MyGameMyLive\\Program.cs",
               "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\Program.cs",
               "RelativeToolTip": "MyGameMyLive\\Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAswEwAAAAAAAAA",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAAAMEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T15:27:20.219Z",
+              "WhenOpened": "2024-09-24T07:35:01.547Z",
               "EditorCaption": ""
             },
             {
@@ -104,27 +177,61 @@
               "RelativeDocumentMoniker": "MyGameMyLive\\Map.cs",
               "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\Map.cs",
               "RelativeToolTip": "MyGameMyLive\\Map.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA6wCAAAAAlAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAQwCcAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T15:27:19.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T15:27:19.105Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Player.cs",
               "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\Player.cs",
               "RelativeDocumentMoniker": "MyGameMyLive\\Player.cs",
               "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\Player.cs",
               "RelativeToolTip": "MyGameMyLive\\Player.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwCsAAAAAAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAQwGAAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T15:27:19.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T15:27:19.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "Write.cs",
+              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\Write.cs",
+              "RelativeDocumentMoniker": "MyGameMyLive\\Write.cs",
+              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\Write.cs",
+              "RelativeToolTip": "MyGameMyLive\\Write.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAmwCAAAABwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T17:04:17.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\Unit.cs",
+              "RelativeDocumentMoniker": "MyGameMyLive\\Unit.cs",
+              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\Unit.cs",
+              "RelativeToolTip": "MyGameMyLive\\Unit.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T15:27:20.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BattleAndAction.cs",
+              "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\BattleAndAction.cs",
+              "RelativeDocumentMoniker": "MyGameMyLive\\BattleAndAction.cs",
+              "ToolTip": "G:\\Fork\\MyGame\\MyGameMyLive\\BattleAndAction.cs",
+              "RelativeToolTip": "MyGameMyLive\\BattleAndAction.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T10:56:14.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Input.cs",
               "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\Input.cs",
               "RelativeDocumentMoniker": "MyGameMyLive\\Input.cs",
@@ -132,12 +239,11 @@
               "RelativeToolTip": "MyGameMyLive\\Input.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T15:27:17.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T15:27:17.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "ConclusionLoading.cs",
               "DocumentMoniker": "G:\\Fork\\MyGame\\MyGameMyLive\\ConclusionLoading.cs",
               "RelativeDocumentMoniker": "MyGameMyLive\\ConclusionLoading.cs",
@@ -145,8 +251,7 @@
               "RelativeToolTip": "MyGameMyLive\\ConclusionLoading.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAYwCgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T15:26:23.133Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-05T15:26:23.133Z"
             }
           ]
         }
